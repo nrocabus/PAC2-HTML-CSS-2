@@ -7,13 +7,15 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  padding: 2rem;
+  // padding: 2rem;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: $uoc-bg;
   color: $uoc-corporate;
 }
+
+
 
 .uoc-container {
   max-width: 800px;
@@ -54,4 +56,136 @@ body {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
+}
+
+
+
+
+
+.header, footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color:white;
+  background: repeating-linear-gradient(
+      45deg,
+      #606dbc,
+      #606dbc 10px,
+      #465298 10px,
+      #465298 20px
+  );
+}
+
+.logo-image {
+  height: 40px;
+}
+
+.nav-list, .social{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+
+.social-item_img{
+  width: 20px;
+  height:20px;
+}
+
+
+.index-content {
+  width: 100vw;
+  height:100vh;
+  display: grid;
+  grid-template-columns: 1fr .5fr 2fr .5fr 1fr;
+  grid-template-rows: 100px minmax(200px, calc(50% - 200px)) minmax(50px, calc(30% - 200px)) minmax(200px, calc(20% - 200px)) 100px;
+
+  background-color: black;
+}
+
+
+.vertical-text{
+
+  p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: yellow;
+  }
+  
+}
+
+.logo{
+
+  background: lightcoral;
+  font-family: "Spectral", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.logo-header{
+  grid-column: 1 / 2;
+  grid-row: 1 / 1;
+}
+
+.logo--footer{
+  grid-column: 1 / 2;
+  grid-row: 5 / 5;
+}
+
+.title-background{
+  grid-area: 2 / 1 / 5 / 5;
+  overflow: hidden;
+  video{
+    width:100%;
+  }
+}
+
+.title{
+  grid-area: 2 / 1 / 5 / 5;
+
+  display:flex;
+  .title-text{
+    font-size: 10rem;
+    line-height: 5.5rem;
+    height:100%;
+    width:100%;
+    text-align:center;
+    mix-blend-mode: multiply;
+    margin:0;
+    padding-top: 7rem;
+    background-color: rgb(255, 0, 0);
+    color:white;
+  }
+}
+
+
+.horizontal-menu{
+  display:flex;
+  li{
+    list-style: none;
+    margin: 0 1rem;
+  }
+}
+
+.nav--footer{
+  grid-area: 5 / 2 / 5 / 4;
+  color: white
 }
