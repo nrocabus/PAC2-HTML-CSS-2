@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <title>UOC Boilerplate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lato:ital,wght@0,400;1,100;1,400&family=Open+Sans:wght@300&family=Roboto:wght@100;300&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+
+    <div class="content-grid">
+      <include src="./views/header.html"></include>
+
+      <div class="content__title">Pàgina contingut lliure</div>
+      <div class="content__content">
+
+        
+       
+      </div>
+      <div class="content__bottom">La tercera pàgina interior és de contingut completament lliure. La pots usar per a ensenyar qualsevol cosa que sàpigues fer o que hagis après. Algunes idees són: una pàgina de contacte amb un formulari funcional (pot ser interessant provar Netlify FormsLinks to an external site.), una galeria de fotos interactiva, un joc, vídeos… A aquesta pàgina has d’utilitzar les noves unitats i colors de les que es parla al mòdul 3.</div>
+      
+      <include src="./views/footer.html"></include>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+    <script type="module" src="./assets/scripts/main.js"></script> <!-- do not remove this line! -->
   </body>
 </html>

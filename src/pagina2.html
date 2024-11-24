@@ -6,22 +6,42 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <title>UOC Boilerplate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lato:ital,wght@0,400;1,100;1,400&family=Open+Sans:wght@300&family=Roboto:wght@100;300&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+
+    <div class="content-grid">
+      <include src="./views/header.html"></include>
+
+      <div class="content__title">Article</div>
+      <div class="content__content">
+
+        <div class="content__article">
+          <h2>Títol de l'article</h2>
+          <p>subtitol de l'article</p>
+          <figure>
+            <img src="/src/assets/images/httpspixabay.comillustrationstechnology-digital-abstract-8280862.jpg" width="400" height="400" alt="">
+            <figcaption>primera imatge de rpesentació</figcaption>
+          </figure>
+          <p>primer paràgram a la informació</p>
+          <p>segon paràgram a la informació</p>
+          <figure>
+            <img src="/src/assets/images/httpspixabay.comillustrationstechnology-digital-abstract-8280862.jpg" width="400" height="400"  alt="">
+            <figcaption>segona imatge</figcaption>
+          </figure>
+          <p>i tercer paràgram a la informació. Per anaer be posar informació lateral.</p>
+        </div>
+       
+      </div>
+      <div class="content__bottom">Aquesta pàgina ha d'incloure etiquetes com "blockquote" i el css :has(), :is() -i :where() </div>
+      
+      <include src="./views/footer.html"></include>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+    <script type="module" src="./assets/scripts/main.js"></script> <!-- do not remove this line! -->
   </body>
 </html>
