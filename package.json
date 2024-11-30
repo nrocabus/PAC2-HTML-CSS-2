@@ -48,5 +48,8 @@
     "stylelint-config-recess-order": "^5.1.1",
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-scss": "^6.10.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
   }
 }
