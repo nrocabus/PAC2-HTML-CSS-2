@@ -17,13 +17,6 @@
   container-type: inline-size;
 }
 
-@container (max-width: 700px){
-  .footer__nav{
-    flex-direction: column;
-  }
-}
-
-
 .content-grid {
   display: grid;
   grid-template-rows: 100px 1fr 2fr 1fr 100px;
@@ -31,7 +24,11 @@
   width: 100%;
 }
 
-
+@container (max-width: 700px){
+  .footer__nav{
+    flex-direction: column;
+  }
+}
 
 
 

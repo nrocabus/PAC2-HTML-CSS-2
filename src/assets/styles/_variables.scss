@@ -9,15 +9,15 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 
 // PERSONALITZACIÓ VARIABLES BOOTSTRAP
 
-$primary:  #05ec11;
+$primary:  #05ec11;PERSONALITZACIÓVARIABLESBOOTSTRAP$primaryPERSONALITZACIÓVARIABLESBOOTSTRAP$primary
 
-$secondary: rgb(147, 12, 12);
+$secondary: rgb(147, 12, 12);$secondary
 
 $card-color: $secondary;
 
 $card-title-color: $secondary;
 
-$link-color:$secondary;
+$link-color:$primary;
 
 $link-decoration: null;
 
@@ -29,11 +29,19 @@ $btn-border-radius: 2rem;
 
 $thumbnail-padding: 0;
 
+$input-bg: #fff;
+
+$input-border-color: $primary;
+
+$border-width: 2px;
+
+$offcanvas-bg-color: $secondary;
+
 // Variables pròpies index
 
-$background-mix-color: #930c0c;
+$background-mix-color: #930c0c;Variablespròpiesindex$background-mix-colorVariablespròpiesindex$background-mix-color
 
-$background-mix-color-text: #fff;
+$background-mix-color-text: #fff;$background-mix-color-text
 
 
 

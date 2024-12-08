@@ -1,5 +1,9 @@
 .content {
+  display: flex;
   flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards-content {
@@ -7,6 +11,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  width:100%;
   max-width: 1200px;
   container-type: inline-size;
   .card{
@@ -33,6 +38,9 @@
       height: 200px;
       object-fit: cover;
     }
+  }
+  p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 }
 

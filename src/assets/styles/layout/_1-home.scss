@@ -1,42 +1,31 @@
 @use "sass:map";
 
 
-
-@layer flex, grid;
-
-
+@layer base, flex, grid;
 
 
 @layer base {
 
-  p,
-  h1,
-  h2,
-  h3 {
+  p
+  {
     font-family: 'Courier New', Courier, monospace;
   }
 
-  
-}
-
-@layer module {
   h2 {
-    font-family: 
-      'Lucida Sans', 
-      'Lucida Sans Regular', 
-      'Lucida Grande', 
-      'Lucida Sans Unicode', 
-      Geneva, 
-      Verdana, 
+    font-family:
+      'Lucida Sans',
+      'Lucida Sans Regular',
+      'Lucida Grande',
+      'Lucida Sans Unicode',
+      Geneva,
+      Verdana,
       sans-serif;
   }
 }
 
-
 // Classes amb FlexBox alternatives a grid
 
-@layer flex{
-
+@layer flex {
   .index-grid {
     position: relative;
     display: flex;
@@ -111,7 +100,7 @@
   }
 }
 
-@layer grid{
+@layer grid {
 
   // Classes Amb Grid quan sigui suportat
 
@@ -119,28 +108,30 @@
     .index-grid {
       display: grid;
       flex-grow: 1;
-      grid-template-rows: 
-        3rem 3rem 80px 80px 
-        minmax(0, 3rem) auto;
-      grid-template-columns: 
-        1fr minmax(80px, 200px) 
-        minmax(80px, 200px) 1fr;
+      grid-template-rows:
+        3rem 3rem 80px 80px minmax(0, 3rem) auto;
+      grid-template-columns:
+        1fr minmax(80px, 200px) minmax(80px, 200px) 1fr;
       align-items: normal;
       max-width: 100%;
       height: 100%;
 
       @include media-breakpoint-up(sm) {
-        grid-template-rows: 
-          auto 3rem minmax(80px, 150px) minmax(80px, 150px) 
+        grid-template-rows:
+          auto 3rem minmax(80px, 150px) 
+          minmax(80px, 150px) 
           minmax(0, 3rem) auto;
-        grid-template-columns: 
-          1fr fit-content(300px) fit-content(300px) 
+
+        grid-template-columns:
+          1fr fit-content(300px) 
+          fit-content(300px) 
           minmax(0px, 100px) 1fr;
       }
 
       .grid-background {
         grid-area: 1 / 1 / 7 / 5;
         overflow: hidden;
+
         @include media-breakpoint-up(sm) {
           grid-area: 1 / 1 / 7 / 6;
         }
@@ -197,6 +188,7 @@
         align-items: flex-end;
         justify-content: flex-end;
         padding-bottom: 1rem;
+
         @include media-breakpoint-up(sm) {
           align-items: center;
         }
@@ -208,6 +200,7 @@
         justify-content: flex-start;
         padding-bottom: 1rem;
         color: #5bc5db;
+
         @include media-breakpoint-up(sm) {
           align-items: center;
         }
@@ -245,9 +238,8 @@
 
     }
 
-
-  
   }
+
   @include media-breakpoint-up(sm) {
 
     .vertical-text {
@@ -271,6 +263,7 @@
     .grid-background {
       grid-area: 2 / 1 / 5 / 6;
       overflow: hidden;
+
       video {
         width: 100%;
         height: 100%;
@@ -279,7 +272,3 @@
     }
   }
 }
-
-
-
-

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="ca">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -44,41 +44,30 @@
           class="inscription-form"
         > 
         <div class="d-flex justify-content-center">
-            <button type="submit" id="inscription-form" class="btn btn-primary form-button">Inscriu-t'hi</button>
+            <button type="submit" form="inscription-form" class="btn btn-primary form-button">Inscriu-t'hi</button>
         </div>
 
         <div class="form-group">
           <label for="name">Name</label>
-          <input class="form-control form-name" type="text" name="name" placeholder="Escriu el teu nom" value="" required>
+          <input class="form-control form-name" type="text" id="name" name="name" placeholder="Escriu el teu nom" value="" required>
         </div> 
 
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input class="form-control form-email" type="email" name="email" placeholder="Escriu el teu mail" value="" required>
+          <input class="form-control form-email" type="email" id="email" name="email" placeholder="Escriu el teu mail" value="" required>
         </div>
         
         <div class="form-group">
           <label for="phone">Numero de telèfon mòbil</label>
-          <input class="form-control form-mobile" type="number" name="phone" placeholder="Escriu el teu numero de mòbil" value="" required>
+          <input class="form-control form-mobile" type="number" id="phone" name="phone" placeholder="Escriu el teu numero de mòbil" value="" required>
         </div>
-
-        <!-- <div class="form-group">
-          <label for="code">Llenguatge utilitzat</label>
-          <input class="form-control form-code" type="text" name="codi" placeholder="Quin llenguatge utilitzes" value="" required>
-        </div> -->
-
-
-        <!-- <div class="form-group">
-          <label for="message">Message</label>
-          <textarea class="form-control" name="message" placeholder="Your Message"></textarea>
-        </div> -->
 
         <div class="input-group mb-3 inscription-select">
           <div>
-            <label class="" for="code">A quina conferència et vols apuntar?</label>
+            <label for="code">A quina conferència et vols apuntar?</label>
           </div>
-          <select class="custom-select form-code form-select" id="inputGroupSelect01" required>
+          <select class="custom-select form-code form-select" id="code" required>
             <option disabled selected value>Escull...</option>
             <option value="1">"Desmuntant defenses: com els hackers pensen i actuen"</option>
             <option value="2">"Criptografia quàntica: el futur de la protecció de dades"</option>
@@ -87,11 +76,6 @@
             <option value="3">"El dilema de la privacitat: tecnologia vs regulació"</option>
           </select>
         </div>
-
-        <!-- <div class="form-group">
-          <div data-netlify-recaptcha="true"></div>
-        </div> -->
-       
         </form>
         
        

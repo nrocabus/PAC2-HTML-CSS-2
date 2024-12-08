@@ -4,7 +4,12 @@
 @layer base {
 
   :where(p, h1, h2, h3, li){
+    max-width:1200px;
     font-family: 'Courier New', Courier, monospace;
+  }
+  
+  :is(article ul, article figure) {
+    margin-bottom: 2rem;
   }
 
   h2 {
@@ -23,18 +28,17 @@
   }
 
   .article-cover h1{
-    text-shadow: #5dff0a 0px 0px 11px;
+    text-shadow: $primary;
   }
-
-
-  .article-figure {
-    max-width: 100%;
-    margin: auto;
-  }
-
 }
 
 @layer layout {
+
+  
+  .article__figure {
+    max-width: 100%;
+    margin: auto;
+  }
 
   .article-intro {
     flex-direction: column;
@@ -50,6 +54,7 @@
   }
 
   .article-cover {
+    width:100vw;
     color: $primary;
     background-image: url(/src/assets/images/httpswww.pexels.comphotoblue-and-red-light-from-computer-1933900.jpg);
     background-repeat: no-repeat;
@@ -70,19 +75,13 @@
     }
   }
 
-  .article-image {
+  .article__image {
     width: 100%;
     object-fit: cover;
   }
-
-
-  .img-hacker {
-    width: clamp(100px, 90vw, 600px);
-    height: fit-content;
-    object-fit: cover;
-  }
-
 }
+
+
 
 @layer module{
 
@@ -92,11 +91,13 @@
     background-size: contain;
     backdrop-filter: opacity(20%);
   }
-
-  :is(article ul, article figure) {
-    margin-bottom: 2rem;
-  }
   
+  .img-hacker {
+    width: clamp(100px, 90vw, 600px);
+    height: fit-content;
+    object-fit: cover;
+  }
+
   .container-card-thumbnail {
     display: flex;
     flex-wrap: wrap;
@@ -107,6 +108,7 @@
     white-space: nowrap;
     white-space: inherit;
     container-type: inline-size;
+
     @include media-breakpoint-up(sm) {
       gap: 3rem;
     }
@@ -148,9 +150,6 @@
     }
     
   }
-
-
-
 
 }
 
