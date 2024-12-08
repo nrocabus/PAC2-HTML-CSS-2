@@ -14,32 +14,92 @@
   </head>
   <body>
 
-    <div class="content-grid">
-      <include src="./views/header.html"></include>
+    <include src="./views/header.html"></include>
 
-      <div class="content__title">Pàgina contingut lliure</div>
-      <div class="content__content">
+    <div class="content">
+
+      <div class="">
+        <h2>Registra't per assistir a les jornades</h2>
+      </div>
+
+      <div class="d-flex gap-4 justify-content-center  flex-wrap">
+
+
+        <div class="progress-container">
+          <div class="progress-topleft"></div>
+          <div class="progress-topright"></div>
+          <div class="progress-bottomleft"></div>
+          <div class="progress-bottomright"></div>
+          <div class="progress-center"></div>
+          <div class="progress-confirmation"><i class="fa-solid fa-check-double"></i></div>
+        </div>
+
 
         <form 
+          id="inscription-form"
           name="contact"   
+          data-netlify="true"
           data-netlify-recaptcha="true"
           action="/pagina3#Success" 
           method="POST" 
-          netlify
-        >
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message"></textarea>
+          class="inscription-form"
+        > 
+        <div class="d-flex justify-content-center">
+            <button type="submit" id="inscription-form" class="btn btn-primary form-button">Inscriu-t'hi</button>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input class="form-control form-name" type="text" name="name" placeholder="Escriu el teu nom" value="" required>
+        </div> 
+
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input class="form-control form-email" type="email" name="email" placeholder="Escriu el teu mail" value="" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Numero de telèfon mòbil</label>
+          <input class="form-control form-mobile" type="number" name="phone" placeholder="Escriu el teu numero de mòbil" value="" required>
+        </div>
+
+        <!-- <div class="form-group">
+          <label for="code">Llenguatge utilitzat</label>
+          <input class="form-control form-code" type="text" name="codi" placeholder="Quin llenguatge utilitzes" value="" required>
+        </div> -->
+
+
+        <!-- <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" name="message" placeholder="Your Message"></textarea>
+        </div> -->
+
+        <div class="input-group mb-3 inscription-select">
+          <div>
+            <label class="" for="code">A quina conferència et vols apuntar?</label>
+          </div>
+          <select class="custom-select form-code form-select" id="inputGroupSelect01" required>
+            <option disabled selected value>Escull...</option>
+            <option value="1">"Desmuntant defenses: com els hackers pensen i actuen"</option>
+            <option value="2">"Criptografia quàntica: el futur de la protecció de dades"</option>
+            <option value="3">"La ment del hacker: com es manipulen les persones per accedir a dades crítiques"</option>
+            <option value="3">"La revolució de l’IA en la detecció d'amenaces cibernètiques"</option>
+            <option value="3">"El dilema de la privacitat: tecnologia vs regulació"</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <div data-netlify-recaptcha="true"></div>
-          <button type="submit">Send</button>
+        </div>
+       
         </form>
         
        
-      </div>
-      <div class="content__bottom">La tercera pàgina interior és de contingut completament lliure. La pots usar per a ensenyar qualsevol cosa que sàpigues fer o que hagis après. Algunes idees són: una pàgina de contacte amb un formulari funcional (pot ser interessant provar Netlify FormsLinks to an external site.), una galeria de fotos interactiva, un joc, vídeos… A aquesta pàgina has d’utilitzar les noves unitats i colors de les que es parla al mòdul 3.</div>
-      
-      <include src="./views/footer.html"></include>
+      </div>      
     </div>
+
+    <include src="./views/footer.html"></include>
 
     <script type="module" src="./assets/scripts/main.js"></script> <!-- do not remove this line! -->
   </body>

@@ -1,0 +1,135 @@
+
+
+.progress-container {
+    width: clamp(100px, 300px, 80cqw);
+    height: clamp(100px, 300px, 80cqw);
+    border-radius: 50%;
+    position: relative;
+    container-type: size;
+    background-image: url(/src/assets/images/candau.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-topleft {
+    display: none;
+    position: absolute;
+    width: 50cqw;
+    height: 50cqh;
+    top: 0;
+    left: 0;
+    background-color: color(display-p3 0.25 0.81 0.25);
+    mix-blend-mode: overlay;
+    border-top-left-radius: 100%;
+}
+
+.progress-topright {
+    display: none;
+    position: absolute;
+    width: 50cqw;
+    height: 50cqh;
+    top: 0;
+    left: 50cqw;
+    background-color: color(display-p3 0 0.41 1);
+    mix-blend-mode: overlay;
+    border-top-right-radius: 100%;
+}
+
+.progress-bottomleft {
+    display: none;
+    position: absolute;
+    width: 50cqw;
+    height: 50cqh;
+    top: 50cqh;
+    left: 0;
+    background-color: color(display-p3 0.86 0.08 0.08);
+    mix-blend-mode: overlay;
+    border-bottom-left-radius: 100%;
+}
+
+.progress-bottomright {
+    display: none;
+    position: absolute;
+    width: 50cqw;
+    height: 50cqh;
+    top: 50cqh;
+    left: 50cqw;
+    background-color: color(display-p3 0.86 0.55 0.08);
+    mix-blend-mode: overlay;
+    border-bottom-right-radius: 100%;
+}
+
+.progress-confirmation {
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+    color: #c6c6c6;
+    box-shadow: none;
+    width: 0cqw;
+    height: 0cqh;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    font-size: clamp(1rem, 3rem, 5rem)
+}
+
+.content:has(.form-name:valid) {
+    .progress-topleft {
+        display: block;
+    }
+}
+
+.content:has(.form-email:valid) {
+    .progress-topright {
+        display: block;
+    }
+}
+
+.content:has(.form-mobile:valid) {
+    .progress-bottomleft {
+        display: block;
+    }
+}
+
+.content:has(.form-select:valid) {
+    .progress-bottomright {
+        display: block;
+    }
+}
+
+.content:has(.form-name:valid):has(.form-email:valid):has(.form-mobile:valid):has(.form-code:valid) {
+    .progress-confirmation {
+        display: flex;
+        width: 40cqw;
+        height: 40cqh;
+        box-shadow: 0px 0px 90px 34px rgb(0 0 0 / .7);
+    }
+    .form-button {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.inscription-form {
+    width: clamp(100px, 300px, 80cqw);
+}
+
+.inscription-select {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column
+}
+
+.form-select {
+    max-width: 100%;
+    width: 100% !important;
+}
+
+.form-button {
+    transition-duration: .5s;
+    transition-delay: 2s;
+    opacity: 0;
+}

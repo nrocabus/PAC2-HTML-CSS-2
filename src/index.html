@@ -11,43 +11,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lato:ital,wght@0,400;1,100;1,400&family=Open+Sans:wght@300&family=Roboto:wght@100;300&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lato:ital,wght@0,400;1,100;1,400&family=Open+Sans:wght@300&family=Roboto:wght@100;300&family=Sixtyfour+Convergence&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
   </head>
   <body>
+    
+    <include src="./views/header.html"></include>
 
     <div class="index-grid">
-      <include src="./views/header.html"></include>
 
-
-
-
-
-      <div class="title-background">
+      <div class="grid-background">
         <video class="bg-video" autoplay loop muted>
           <source src="/src/assets/images/httpspixabay.comvideosparticles-data-connection-185631.mp4" type="video/mp4" />
           
         </video>
       </div>
 
-      <div class="title"></div>
       <div class="grid__center__top"></div>
+      <!-- <div class="grid-text grid-text--top">
+        <p>Apren a protegir-te de les amenaces cibernètiques</p>
+      </div> -->
+      <div class="grid__center__bottom"></div>
       <div class="grid__center__left"></div>
       <div class="grid__center__right"></div>
-      <div class="grid__center__bottom"></div>
       
-      <h1 class="title-text">Ciber<br>Seguretat</h1>
-
-      <div class="subtitle">&lsaquo; Apren a protegir-te de les amenaces cibernètiques i participa al PRIMER CONCURS DE PROGRAMACIÓ &rsaquo;</div>
-
-      <div class="vertical-text">
-        <p>15 de Desembre de 2025<br>Centre Cívic de Pont Major<br>Girona</rb></p>
+      <!-- <div class="grid__center__center">
+        <h1 class="title-text">Ciber<br>Seguretat</h1>
+      </div> -->
+      <div class="grid-heading grid-heading--ciber">
+        Ciber
+      </div>
+      <div class="grid-heading grid-heading--2025">
+        2025
+      </div>
+      <div class="grid-heading grid-heading--seguretat">
+        Seguretat
       </div>
 
+      <div class="grid-text grid-text--bottom">
+        <p>&lsaquo; Del 25 al 31 de Gener de 2025 participa a les jornades de ciberseguretat &rsaquo;</p>
+        <button class="btn btn-primary">Ciberseguretat 2025</button>
+        <button class="btn btn-primary">Inscriu-te a les jornades</button>
+      </div>
+
+      <div class="vertical-text">Viu-les presencialment a Girona o en directe online</div>
 
 
 
+ 
       
-      <include src="./views/footer.html"></include>
-    </div>
+    </div>      
+    
+    <include src="./views/footer.html"></include>
 
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

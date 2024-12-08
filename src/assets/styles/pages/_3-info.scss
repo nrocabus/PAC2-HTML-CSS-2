@@ -1,0 +1,126 @@
+@layer base, module;
+
+
+@layer base {
+
+  p,
+  h1,
+  h2,
+  h3,
+  li {
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+@layer module {
+  h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+}
+
+article li {
+  list-style: circle;
+}
+
+.article-intro {
+  flex-direction: column;
+  padding: 2rem 0;
+  container-type: inline-size;
+  gap: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    margin: auto auto;
+    width: 100%;
+  }
+}
+
+.article-cover {
+  background-image: url(/src/assets/images/httpswww.pexels.comphotoblue-and-red-light-from-computer-1933900.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $primary;
+}
+
+.article-content {
+  gap: 1rem;
+  max-width: 1000px;
+  container-type: inline-size;
+  width: 90%;
+  @include media-breakpoint-up(sm) {
+    width: 80%;
+  }
+  @include media-breakpoint-up(md) {
+    width: 60%;
+  }
+}
+
+figure {
+  margin: auto;
+}
+
+.article-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.img-hacker {
+  width: clamp(100px, 90vw, 600px);
+  object-fit: cover;
+  height: fit-content;
+}
+
+.container-card-thumbnail {
+  white-space: nowrap;
+  container-type: inline-size;
+  white-space: inherit;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: 3rem 0;
+  display: flex;
+  @include media-breakpoint-up(sm) {
+    gap: 3rem;
+  }
+
+  .card-thumbnail {
+    width: clamp(120px, 90vh, 200px);
+    aspect-ratio: 1;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    .card-body {
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0) 40%, rgba(57, 57, 57, 0.7233018207282913) 70%, rgba(0, 0, 0, 0.7737219887955182) 100%);
+      color: $primary;
+      padding: .2rem 1rem;
+    }
+
+    img {
+      position: absolute;
+      border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+}
+
+.card-thumbnail:not(:has(img)) {
+  background: url("/src/assets/images/avatar-3814049_640.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  backdrop-filter: opacity(20%);
+}
+
+:is(article ul, article figure) {
+  margin-bottom: 2rem;
+}

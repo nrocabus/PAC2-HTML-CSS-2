@@ -1,5 +1,6 @@
 @use "sass:color";
 
+
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
@@ -11,6 +12,23 @@ $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
 
-$theme-colors: (    //exemple modificar bootstrap
- "primary": #bada55 // posa-hi el codi de color que prefereixis
-);
+
+// PERSONALITZACIÓ VARIABLES BOOTSTRAP
+
+// $theme-colors: (    //exemple modificar bootstrap
+//  "primary": #ec6905 // posa-hi el codi de color que prefereixis
+// );
+
+$primary:  #05ec11;
+$secondary: #930c0c;
+
+$body-color: rgb(0, 0, 0);
+// $body-bg: rgb(51, 0, 255);
+
+$background-mix-color: #930c0c;
+
+$background-mix-color-text: #fff;
+
+// $navbar-color: yellow;
+
+

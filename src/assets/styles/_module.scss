@@ -1,0 +1,109 @@
+ @layer base, modules, modifiers;
+ 
+ // NOMÉS ELEMENTS QUE ES PUGUIN REPETIR EN MÉS D'UNA PÀGINA
+
+
+// @layer base{
+  .logo{
+    font-family: 'Courier New', Courier, monospace;
+  }  
+// }
+
+// @layer modules{
+    .nav__link {
+        text-decoration: none;
+        color: $primary;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        color:$primary;
+    }
+    
+    .footer__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .social{
+        gap:2rem;
+    }
+
+    .max-width {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .nav-link .nav__link{
+        color: $primary;
+    }
+
+// }
+
+// @layer modifiers{
+    .logo--ciber {
+        color: rgb(238, 255, 0);
+        border-bottom: solid 5px rgb(67, 23, 227);
+    }
+
+    .logo--ia {
+        color: rgb(238, 255, 0);
+        border-bottom: solid 5px rgb(0, 149, 255);
+    }
+
+    .nav__link:hover {
+        color: #007bff;
+    }
+
+    .nav__link--active{
+        border-bottom: solid 2px white;
+    }
+    .nav__icon--color {
+        color: $primary;
+    }
+
+    .navbar--desktop{
+        display:none;
+    }
+    
+@include media-breakpoint-up(sm) {
+    .footer__nav{
+        flex-direction: row;
+    }
+    .nav-item {
+        margin-left: 10px;
+        margin-left: 10px;
+    }
+    .navbar--desktop{
+        display:block;
+    }
+    .nav__icon, .navbar-toggler{
+        display:none;
+    }
+}
+
+@container (max-width: 300px) {
+    .footer__nav ul{
+        flex-direction: column; 
+    }
+}
+
+@include media-breakpoint-down(sm) { //down
+    @container (max-width: 350px) {
+        .nav .navbar-nav {
+            flex-direction: column !important;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+// }
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+.content {
+  flex-grow: 1;
+}
+
+.cards-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  container-type: inline-size;
+  padding: 4rem;
+  max-width: 1200px;
+  margin: auto;
+  @container (min-width: 350px) {
+
+    .card {
+      width: 300px;
+      height: min-content;
+    }
+
+    img {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+  }
+}

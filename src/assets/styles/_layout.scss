@@ -1,0 +1,39 @@
+@use "sass:map";
+
+
+.body--index {
+    max-height: 100vh;
+}
+
+
+// HEADER
+
+.header {
+    width: 100vw;
+    background: black;
+}
+
+.footer {
+    width: 100vw;
+    padding: 3rem;
+    container-type: inline-size !important;
+
+}
+
+.content-grid {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr 2fr 1fr 100px;
+    grid-template-columns: .5fr 2fr .5fr;
+}
+
+
+
+
+
+
+
+
+
+
+
