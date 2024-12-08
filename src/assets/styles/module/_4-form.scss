@@ -1,5 +1,9 @@
 
 
+
+
+
+
 .progress-container {
   position: relative;
   display: flex;
@@ -106,10 +110,7 @@
   transition-duration: .5s;
 }
 
-.content:has(.form-name:valid)
-:has(.form-email:valid)
-:has(.form-mobile:valid)
-:has(.form-code:valid) {
+.content:has(.form-name:valid):has(.form-email:valid):has(.form-mobile:valid):has(.form-code:valid) {
   .progress-confirmation {
     display: flex;
     width: 40cqw;

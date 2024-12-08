@@ -28,14 +28,18 @@
 
 
 @import "base";
+
 @import "layout";
+
 @import "module";
+  @import "module/1-home";
+  @import "module/2-participants";
+  @import "module/3-info";
+  @import "module/4-form";
+
 @import "state";
 
-@import "pages/1-home";
-@import "pages/2-participants";
-@import "pages/3-info";
-@import "pages/4-form";
+
 
 /**
  * Do NOT include anything else in this file!
