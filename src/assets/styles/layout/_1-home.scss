@@ -1,0 +1,285 @@
+@use "sass:map";
+
+
+
+@layer flex, grid;
+
+
+
+
+@layer base {
+
+  p,
+  h1,
+  h2,
+  h3 {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  
+}
+
+@layer module {
+  h2 {
+    font-family: 
+      'Lucida Sans', 
+      'Lucida Sans Regular', 
+      'Lucida Grande', 
+      'Lucida Sans Unicode', 
+      Geneva, 
+      Verdana, 
+      sans-serif;
+  }
+}
+
+
+// Classes amb FlexBox alternatives a grid
+
+@layer flex{
+
+  .index-grid {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100%;
+
+    .grid-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .grid-center-top {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $background-mix-color;
+      mix-blend-mode: multiply;
+    }
+
+    .grid-heading {
+      z-index: 2;
+      display: flex;
+      height: clamp(3rem, 50cqh, 4rem);
+      margin-top: 1rem;
+      font-size: clamp(10cqw, 14cqw, 6rem);
+      font-size: clamp(3rem, 16cqh, 5rem);
+      ;
+      font-weight: 900;
+      color: $primary;
+    }
+
+    .grid-heading--2025 {
+      color: #5bc5db;
+    }
+
+    .grid-text {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2;
+      justify-content: center;
+      width: clamp(100px, 90%, 300px);
+      padding: 1.5rem;
+      color: yellow;
+      text-align: center;
+    }
+
+    .grid-center-bottom,
+    .grid-center-left,
+    .grid-center-right {
+      display: none;
+    }
+
+    .vertical-text {
+      display: none;
+    }
+  }
+}
+
+@layer grid{
+
+  // Classes Amb Grid quan sigui suportat
+
+  @supports (display: grid) {
+    .index-grid {
+      display: grid;
+      flex-grow: 1;
+      grid-template-rows: 
+        3rem 3rem 80px 80px 
+        minmax(0, 3rem) auto;
+      grid-template-columns: 
+        1fr minmax(80px, 200px) 
+        minmax(80px, 200px) 1fr;
+      align-items: normal;
+      max-width: 100%;
+      height: 100%;
+
+      @include media-breakpoint-up(sm) {
+        grid-template-rows: 
+          auto 3rem minmax(80px, 150px) minmax(80px, 150px) 
+          minmax(0, 3rem) auto;
+        grid-template-columns: 
+          1fr fit-content(300px) fit-content(300px) 
+          minmax(0px, 100px) 1fr;
+      }
+
+      .grid-background {
+        grid-area: 1 / 1 / 7 / 5;
+        overflow: hidden;
+        @include media-breakpoint-up(sm) {
+          grid-area: 1 / 1 / 7 / 6;
+        }
+
+        .bg-video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .grid-center-top,
+      .grid-center-bottom,
+      .grid-center-left,
+      .grid-center-right,
+      .grid-center-center,
+      .grid-heading {
+        display: block;
+        background-color: $background-mix-color;
+        mix-blend-mode: multiply;
+      }
+
+      .grid-center-top {
+        grid-area: 1 / 2 / 3 / 4;
+      }
+
+      .grid-center-left {
+        grid-area: 1 / 1 / 7 / 1;
+      }
+
+      .grid-center-right {
+        grid-area: 1 / 4 / 7 / 4;
+
+        @include media-breakpoint-up(sm) {
+          grid-area: 1 / 4 / 7 / 6;
+        }
+      }
+
+      .grid-center-bottom {
+        grid-area: 5 / 2 / 7 / 4;
+      }
+
+      .grid-heading {
+        display: flex;
+        height: inherit;
+        margin-top: 0;
+        font-size: clamp(10cqw, 14cqw, 6rem);
+        font-weight: 900;
+        color: $primary;
+      }
+
+      .grid-heading--ciber {
+        grid-area: 3 / 2 / 3 / 2;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-bottom: 1rem;
+        @include media-breakpoint-up(sm) {
+          align-items: center;
+        }
+      }
+
+      .grid-heading--2025 {
+        grid-area: 3 / 3 / 3 / 3;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+        color: #5bc5db;
+        @include media-breakpoint-up(sm) {
+          align-items: center;
+        }
+      }
+
+      .grid-heading--seguretat {
+        grid-area: 4 / 2 / 4 / 4;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 1rem;
+      }
+
+      .grid-text {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+        padding: 1.5rem;
+        color: yellow;
+        text-align: center;
+      }
+
+      .grid-text--top {
+        grid-area: 1 / 2 / 3 / 4;
+        align-items: flex-end;
+      }
+
+      .grid-text--bottom {
+        grid-area: 5 / 2 / 7 / 5;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+    }
+
+
+  
+  }
+  @include media-breakpoint-up(sm) {
+
+    .vertical-text {
+      z-index: 1;
+      display: flex;
+      grid-area: 3 / 4 / 5 / 4;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 3rem 0;
+      color: $primary;
+      text-align: center;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+
+    }
+
+    .main-content {
+      grid-area: 2 / 1 / 5 / 6;
+    }
+
+    .grid-background {
+      grid-area: 2 / 1 / 5 / 6;
+      overflow: hidden;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+
+

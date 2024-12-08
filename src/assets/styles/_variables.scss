@@ -6,29 +6,34 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
-$mqMinWidth: 420px;
-
 
 // PERSONALITZACIÓ VARIABLES BOOTSTRAP
 
-// $theme-colors: (    //exemple modificar bootstrap
-//  "primary": #ec6905 // posa-hi el codi de color que prefereixis
-// );
+$primary:  #05ec11;PERSONALITZACIÓVARIABLESBOOTSTRAP$primary
 
-$primary:  #05ec11;
-$secondary: #930c0c;
+$secondary: rgb(147, 12, 12);
+
+$card-color: $secondary;
+
+$card-title-color: $secondary;
+
+$link-color:$secondary;
+
+$link-decoration: null;
 
 $body-color: rgb(0, 0, 0);
-// $body-bg: rgb(51, 0, 255);
 
-$background-mix-color: #930c0c;
+$body-bg: #f1f1f1;
+
+$btn-border-radius: 2rem;
+
+$thumbnail-padding: 0;
+
+// Variables pròpies index
+
+$background-mix-color: #930c0c;Variablespròpiesindex$background-mix-color
 
 $background-mix-color-text: #fff;
 
-// $navbar-color: yellow;
 
 

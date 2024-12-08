@@ -3,7 +3,6 @@
 		"@stylistic/stylelint-plugin"
   ],
 "extends": [
-  "stylelint-config-recommended-scss",
   "stylelint-config-recess-order"
 ],
 "rules": {
