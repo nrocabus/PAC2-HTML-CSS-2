@@ -4,13 +4,13 @@
 
 .cards-content {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  container-type: inline-size;
-  padding: 4rem;
+  justify-content: center;
   max-width: 1200px;
+  padding: 4rem;
   margin: auto;
+  container-type: inline-size;
   @container (min-width: 350px) {
 
     .card {

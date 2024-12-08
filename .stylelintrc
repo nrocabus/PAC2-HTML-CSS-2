@@ -15,7 +15,6 @@
   "@stylistic/max-line-length": [80],
   "@stylistic/selector-list-comma-newline-after": "always",
   "selector-max-id": 0,
-  "selector-max-compound-selectors": 2,
   "comment-whitespace-inside": "always"
 }
 }
